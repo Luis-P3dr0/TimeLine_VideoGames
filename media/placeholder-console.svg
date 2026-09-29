@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#f3f4f6"/>
+  <g fill="#d1d5db" stroke="#9ca3af">
+    <rect x="120" y="80" width="560" height="220" rx="14"/>
+    <rect x="220" y="140" width="120" height="80" rx="8"/>
+    <rect x="460" y="140" width="120" height="80" rx="8"/>
+  </g>
+  <text x="50%" y="350" text-anchor="middle" fill="#6b7280" font-size="18">Placeholder: imagem de console</text>
+</svg>

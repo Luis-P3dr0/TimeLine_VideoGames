@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início - Time Line of the Video Games</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Link de atalho para leitores de tela e teclado -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Região para anúncios ARIA de leitores de tela -->
+  <div id="accessible-announcer" class="sr-only" aria-live="polite" style="position:absolute; left:-9999px;"></div>
+
+  <div class="site-container">
+
+    <!-- BARRA SUPERIOR (HEADER) -->
+    <header class="top-header" role="banner">
+      <h2>Acessibilidade Web</h2>
+      <div class="accessibility-toolbar" role="toolbar" aria-label="Ferramentas de Acessibilidade">
+        <button id="btn-increase-font" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button id="btn-decrease-font" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button id="btn-reset-font" aria-label="Restaurar tamanho da fonte original">Reset</button>
+        <button id="btn-high-contrast" aria-pressed="false" aria-label="Alternar modo de alto contraste">Alto Contraste</button>
+      </div>
+    </header>
+
+    <!-- MENU LATERAL (SIDEBAR) -->
+    <nav class="sidebar" role="navigation" aria-label="Navegação da Linha do Tempo">
+      <div class="sidebar-title">
+        <h3>Navegação</h3>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" aria-current="page">Início</a></li>
+        <li><a href="anos70.html">Anos 70</a></li>
+        <li><a href="anos80.html">Anos 80</a></li>
+        <li><a href="anos90.html">Anos 90</a></li>
+        <li><a href="anos2000.html">Anos 2000</a></li>
+        <li><a href="anos2010.html">Anos 2010+</a></li>
+      </ul>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="main-content" class="main-content" role="main" tabindex="-1">
+
+      <div class="title-banner">
+        <h1>Time Line of the Video Games</h1>
+      </div>
+
+      <section class="content-section">
+        <h2>Bem-vindo à Linha do Tempo dos Vídeo Games</h2>
+        <p>Este site foi desenvolvido com foco total em inclusão e acessibilidade digital. Nosso objetivo é apresentar a evolução dos jogos eletrônicos desde os primórdios nos anos 70 até a era moderna, garantindo acesso igualitário a todas as pessoas.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Recursos de Acessibilidade do Site</h2>
+        <ul>
+          <li><strong>Contraste Ajustável:</strong> Ative o botão "Alto Contraste" no topo para visualizar cores em preto e amarelo[cite: 1, 2].</li>
+          <li><strong>Ajuste de Fonte:</strong> Utilize os botões <code>A+</code>, <code>A-</code> e <code>Reset</code> para adequar a leitura.</li>
+          <li><strong>Semântica ARIA:</strong> Estrutura de marcas e rótulos para navegadores e leitores de tela (NVDA, JAWS, VoiceOver).</li>
+          <li><strong>Suporte a Mídia:</strong> Todas as imagens possuem descrições alternativas (ALT) e os conteúdos em áudio e vídeo oferecem transcrições em texto[cite: 1, 2].</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>Exemplo de Som de Abertura (Áudio Inclusivo)</h2>
+        <div class="media-card">
+          <p><strong>Amostra Sonora: Som de Inicialização Clássico</strong></p>
+          <audio controls aria-label="Som sintetizado de console antigo">
+            <source src="https://youtu.be/psbwY0TKwYo?si=0H-akEjAZ-sAWbI3" type="video/mp3">
+            Seu navegador não suporta o elemento de áudio.
+          </audio>
+          <div class="transcript-box">
+            <strong>Transcrição do Áudio:</strong> Um efeito sonoro ascendente em tom sintetizado de 8 bits, representando a inicialização de um console clássico.
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
