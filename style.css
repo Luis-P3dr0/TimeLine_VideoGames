@@ -278,6 +278,18 @@ body.high-contrast .media-card {
   border: 1px solid #888;
 }
 
+/* Figuras de jogos: imagem centrada e com altura máxima uniforme */
+.media-card figure img {
+  width: auto;
+  max-height: 460px;
+  margin: 0 auto 12px;
+}
+
+.media-card figure figcaption {
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
 .transcript-box {
   margin-top: 12px;
   padding: 12px;
