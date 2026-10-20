@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Década de 1980: a era pixelada dos 8 bits, com Super Mario Bros e os clássicos que definiram os videogames.">
   <title>Anos 80 - Time Line of the Video Games</title>
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -14,33 +15,78 @@
   <div class="site-container">
 
     <header class="top-header" role="banner">
-      <h2>Acessibilidade Web</h2>
+      <div class="header-left">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="site-sidebar">
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <p class="header-title">Acessibilidade Web</p>
+      </div>
       <div class="accessibility-toolbar" role="toolbar" aria-label="Ferramentas de Acessibilidade">
-        <button id="btn-increase-font" aria-label="Aumentar tamanho da fonte">A+</button>
-        <button id="btn-decrease-font" aria-label="Diminuir tamanho da fonte">A-</button>
-        <button id="btn-reset-font" aria-label="Restaurar tamanho da fonte original">Reset</button>
-        <button id="btn-high-contrast" aria-pressed="false" aria-label="Alternar modo de alto contraste">Alto Contraste</button>
+        <button id="btn-increase-font" type="button" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button id="btn-decrease-font" type="button" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button id="btn-reset-font" type="button" aria-label="Restaurar tamanho da fonte original">Reset</button>
+        <button id="btn-high-contrast" type="button" aria-pressed="false" aria-label="Alternar modo de alto contraste">Alto Contraste</button>
       </div>
     </header>
 
-    <nav class="sidebar" role="navigation" aria-label="Navegação da Linha do Tempo">
-      <div class="sidebar-title">
-        <h3>Navegação</h3>
+    <nav class="sidebar" id="site-sidebar" role="navigation" aria-label="Navegação da Linha do Tempo">
+      <div class="sidebar-brand">
+        <span class="brand-icon" aria-hidden="true">🎮</span>
+        <p class="brand-title">Time Line</p>
+        <p class="brand-subtitle">of the Video Games</p>
       </div>
-      <ul class="nav-menu">
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="anos70.html">Anos 70</a></li>
-        <li><a href="anos80.html" aria-current="page">Anos 80</a></li>
-        <li><a href="anos90.html">Anos 90</a></li>
-        <li><a href="anos2000.html">Anos 2000</a></li>
-        <li><a href="anos2010.html">Anos 2010+</a></li>
-        <li><a href="rpg.html">Jogos RPG</a></li>
-        <li><a href="simuladores.html">Simuladores</a></li>
-        <li><a href="battle-royale.html">Battle Royale</a></li>
-        <li><a href="rts.html">RTS</a></li>
-        <li><a href="party-games.html">Party Games</a></li>
-        <li><a href="esportes.html">Esportes</a></li>
-      </ul>
+
+      <div class="nav-area">
+        <a href="../index.html" class="nav-direct-link">
+          <span class="link-icon" aria-hidden="true">🏠</span>
+          Início
+        </a>
+
+        <p class="nav-section-label">Linha do Tempo</p>
+
+        <div class="nav-dropdown open" id="dropdown-decadas">
+          <button class="dropdown-btn" type="button" aria-expanded="true" aria-controls="content-decadas">
+            <span class="dropdown-btn-inner">
+              <span class="btn-icon" aria-hidden="true">📅</span>
+              Décadas
+            </span>
+            <span class="dropdown-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="dropdown-content" id="content-decadas" role="list">
+            <a href="anos70.html" class="nav-link" role="listitem">⚡ Anos 70</a>
+            <a href="anos80.html" class="nav-link" role="listitem" aria-current="page">🕹️ Anos 80</a>
+            <a href="anos90.html" class="nav-link" role="listitem">💿 Anos 90</a>
+            <a href="anos2000.html" class="nav-link" role="listitem">🌐 Anos 2000</a>
+            <a href="anos2010.html" class="nav-link" role="listitem">🚀 Anos 2010+</a>
+          </div>
+        </div>
+
+        <p class="nav-section-label">Gêneros</p>
+
+        <div class="nav-dropdown" id="dropdown-generos">
+          <button class="dropdown-btn" type="button" aria-expanded="false" aria-controls="content-generos">
+            <span class="dropdown-btn-inner">
+              <span class="btn-icon" aria-hidden="true">🎲</span>
+              Gêneros
+            </span>
+            <span class="dropdown-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="dropdown-content" id="content-generos" role="list">
+            <a href="rpg.html" class="nav-link" role="listitem">⚔️ Jogos RPG</a>
+            <a href="simuladores.html" class="nav-link" role="listitem">✈️ Simuladores</a>
+            <a href="battle-royale.html" class="nav-link" role="listitem">🏆 Battle Royale</a>
+            <a href="rts.html" class="nav-link" role="listitem">🗺️ RTS</a>
+            <a href="party-games.html" class="nav-link" role="listitem">🎉 Party Games</a>
+            <a href="esportes.html" class="nav-link" role="listitem">⚽ Esportes</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <p>© 2026 Time Line VideoGames<br>Todos os direitos reservados</p>
+      </div>
     </nav>
 
     <main id="main-content" class="main-content" role="main" tabindex="-1">

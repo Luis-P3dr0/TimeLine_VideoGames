@@ -18,11 +18,11 @@
   <div class="site-container">
 
     <!-- SIDEBAR MODERNA COM DROPDOWN -->
-    <nav class="sidebar" role="navigation" aria-label="Navegação da Linha do Tempo">
+    <nav class="sidebar" id="site-sidebar" role="navigation" aria-label="Navegação da Linha do Tempo">
 
       <div class="sidebar-brand">
         <span class="brand-icon" aria-hidden="true">🎮</span>
-        <h3>Time Line</h3>
+        <p class="brand-title">Time Line</p>
         <p class="brand-subtitle">of the Video Games</p>
       </div>
 
@@ -38,7 +38,7 @@
 
         <!-- Dropdown: Décadas -->
         <div class="nav-dropdown open" id="dropdown-decadas">
-          <button class="dropdown-btn" aria-expanded="true" aria-controls="content-decadas" id="btn-decadas">
+          <button class="dropdown-btn" type="button" aria-expanded="true" aria-controls="content-decadas">
             <span class="dropdown-btn-inner">
               <span class="btn-icon" aria-hidden="true">📅</span>
               Décadas
@@ -58,7 +58,7 @@
 
         <!-- Dropdown: Gêneros -->
         <div class="nav-dropdown open" id="dropdown-generos">
-          <button class="dropdown-btn" aria-expanded="true" aria-controls="content-generos" id="btn-generos">
+          <button class="dropdown-btn" type="button" aria-expanded="true" aria-controls="content-generos">
             <span class="dropdown-btn-inner">
               <span class="btn-icon" aria-hidden="true">🎲</span>
               Gêneros
@@ -78,18 +78,25 @@
       </div>
 
       <div class="sidebar-footer">
-        <p>© 2024 Time Line VideoGames<br>Todos os direitos reservados</p>
+        <p>© 2026 Time Line VideoGames<br>Todos os direitos reservados</p>
       </div>
     </nav>
 
     <!-- HEADER DE ACESSIBILIDADE -->
     <header class="top-header" role="banner">
-      <span class="header-title" aria-label="Acessibilidade Web"></span>
+      <div class="header-left">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="site-sidebar">
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <p class="header-title">Acessibilidade Web</p>
+      </div>
       <div class="accessibility-toolbar" role="toolbar" aria-label="Ferramentas de Acessibilidade">
-        <button id="btn-increase-font" aria-label="Aumentar tamanho da fonte">A+</button>
-        <button id="btn-decrease-font" aria-label="Diminuir tamanho da fonte">A-</button>
-        <button id="btn-reset-font" aria-label="Restaurar tamanho da fonte original">Reset</button>
-        <button id="btn-high-contrast" aria-pressed="false" aria-label="Alternar modo de alto contraste">Alto Contraste</button>
+        <button id="btn-increase-font" type="button" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button id="btn-decrease-font" type="button" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button id="btn-reset-font" type="button" aria-label="Restaurar tamanho da fonte original">Reset</button>
+        <button id="btn-high-contrast" type="button" aria-pressed="false" aria-label="Alternar modo de alto contraste">Alto Contraste</button>
       </div>
     </header>
 
@@ -140,15 +147,5 @@
   </div>
 
   <script src="script.js"></script>
-  <script>
-    // Dropdown da sidebar
-    document.querySelectorAll('.dropdown-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const dropdown = btn.closest('.nav-dropdown');
-        const isOpen = dropdown.classList.toggle('open');
-        btn.setAttribute('aria-expanded', String(isOpen));
-      });
-    });
-  </script>
 </body>
 </html>

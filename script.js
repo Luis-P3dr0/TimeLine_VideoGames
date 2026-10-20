@@ -139,4 +139,57 @@ document.addEventListener('DOMContentLoaded', () => {
       announce(isHighContrast ? 'Modo de alto contraste ativado.' : 'Modo de alto contraste desativado.');
     });
   }
+
+  document.querySelectorAll('.dropdown-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const dropdown = btn.closest('.nav-dropdown');
+      if (!dropdown) return;
+      const isOpen = dropdown.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const sidebar = document.getElementById('site-sidebar');
+
+  if (menuToggle && sidebar) {
+    const overlay = document.createElement('div');
+    overlay.className = 'sidebar-overlay';
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(overlay);
+
+    const setMenuOpen = (open) => {
+      sidebar.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      menuToggle.classList.toggle('is-open', open);
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+      document.body.classList.toggle('menu-open', open);
+    };
+
+    menuToggle.addEventListener('click', () => {
+      setMenuOpen(!sidebar.classList.contains('open'));
+    });
+
+    overlay.addEventListener('click', () => setMenuOpen(false));
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && sidebar.classList.contains('open')) {
+        setMenuOpen(false);
+        menuToggle.focus();
+      }
+    });
+
+    sidebar.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 768px)').matches) setMenuOpen(false);
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (!window.matchMedia('(max-width: 768px)').matches && sidebar.classList.contains('open')) {
+        setMenuOpen(false);
+      }
+    });
+  }
 });
